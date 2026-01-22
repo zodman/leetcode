@@ -7,9 +7,28 @@ from leetgo_py import *
 
 # @lc code=begin
 
+
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        
+        """
+         i
+        [3,2,6,5,0,3]
+         b=2  s=-inf
+
+           b s
+        """
+
+        b = float("inf")
+        s = 0
+        for i in prices:
+            if i < b:
+                b = i
+            profit = i - b
+
+            if profit > s:
+                s = profit
+        return s
+
 
 # @lc code=end
 
