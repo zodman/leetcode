@@ -10,7 +10,13 @@ from leetgo_py import *
 
 class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
-        pass
+        last = 0
+        for i in range(len(nums)):
+            if nums[i] != 0:
+                last = i
+            else:
+                nums[i], nums[last] = nums[last], nums[i]
+                last = i
 
 
 # @lc code=end

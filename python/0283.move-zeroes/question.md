@@ -30,4 +30,14 @@ Output: [0]
 **Follow up:** Could you minimize the total number of operations done?
 
 
+# Notes 
+
+0,1,0,3,12
+^        i=0 l=0
+1,0,0,3,12 
+  ^      i=1, l=0
+
+  
+
+  
 
