@@ -2,7 +2,7 @@
 
 [link]: https://leetcode.com/problems/move-zeroes/
 
-Given an integer array `nums`, move all `0`'s to the end of it while maintaining the relative order
+Given an integer array, move all `0`'s to the end of it while maintaining the relative order
 of the non-zero elements.
 
 **Note** that you must do this in-place without making a copy of the array.
@@ -31,13 +31,34 @@ Output: [0]
 
 
 # Notes 
+Taking the advantage of two pointers together
 
-0,1,0,3,12
-^        i=0 l=0
-1,0,0,3,12 
-  ^      i=1, l=0
+# approx solution 1
+0,1,2,3,4
+r
+l
+0,1,0,3,4 find l=0 and r!=0
+l
+  r
+1,0,0,3,4 (0,1) (SWAP) l+=1 r=find next non-zero
+  l               
+      r
+1,3,0,0,4 (1,3)(SWAP) l+=1 r=find next non-zero
+    l
+        r
+1,3,0,0,4 (2,4)(SWAP)
+1,3,4,0,0 (SWAP) l+=1 r=find next non-zero
 
-  
+# sol 2
+r
+l
+1,0,0
+r l
+# sol 3
+r
+l
+1,0,1
+r l
+  r l
 
-  
 
