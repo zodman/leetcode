@@ -1,27 +1,37 @@
 def p(arr, left, right):
+    width = 4  # Increased width for 3-digit support
+    
     # 1. Print the indices
-    indices = " ".join(f"{i:3}" for i in range(len(arr)))
+    indices = "".join(str(i).center(width) for i in range(len(arr)))
     print(f"Index:   {indices}")
 
     # 2. Print the array values
-    values = " ".join(f"{val:3}" for val in arr)
+    # Fix: We add the brackets outside the joined string to keep alignment perfect
+    values = "".join(str(val).center(width) for val in arr)
     print(f"Array:  [{values}]")
 
     # 3. Create the pointer line
-    pointer_line = ["   "] * len(arr)
-    if left == right:
-        pointer_line[left] = "L&R"
-    else:
-        pointer_line[left] = " L "
-        pointer_line[right] = " R "
+    pointer_line = []
+    for i in range(len(arr)):
+        if i == left == right:
+            label = "L&R"
+        elif i == left:
+            label = "L"
+        elif i == right:
+            label = "R"
+        else:
+            label = ""
+        
+        pointer_line.append(label.center(width))
 
-    print(f"Pointer:  {' '.join(pointer_line)}")
-    print("-" * (len(arr) * 4 + 10))
+    print(f"Pointer: {''.join(pointer_line)}")
+    print("-" * (len(arr) * width + 10))
 
 
 if __name__ == "__main__":
-    # Example usage:
-    nums = [10, 20, 30, 40, 50, 60]
-    L, R = 1, 4
-
-    print(nums, L, R)
+    # Example with 3-digit numbers
+    nums = [100, 250, 300, 450, 500, 999]
+    
+    p([20,20,20, 20,20,20], 0, 5)
+    p(nums, 0, 5)
+    p([1,2,3], 2, 2)

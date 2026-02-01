@@ -14,8 +14,13 @@ class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
         l, r = 0, 0
         while l < len(nums) - 1:
-            pass
-            # dsa.tpprint(nums, l, r)
+            if nums[l] == 0:
+                r = l+1
+                while r < len(nums)-1 and  nums[r] == 0:
+                    r+=1
+                nums[r], nums[l] = nums[l], nums[r]
+            dsa.tpprint(nums, l, r)
+            l+=1
         return nums
 
 
