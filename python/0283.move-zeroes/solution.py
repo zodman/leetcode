@@ -4,6 +4,8 @@
 
 from typing import *
 from leetgo_py import *
+import debug_dsa as dsa
+
 
 # @lc code=begin
 
@@ -12,13 +14,9 @@ class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
         l, r = 0, 0
         while l < len(nums) - 1:
-            while r < len(nums) - 1 and nums[r] == 0:
-                r += 1
-            if r > l and nums[l] == 0 and nums[r] != 0:
-                nums[l], nums[r] = nums[r], nums[l]
-            else:
-                r = l
-            l += 1
+            pass
+            # dsa.tpprint(nums, l, r)
+        return nums
 
 
 # @lc code=end

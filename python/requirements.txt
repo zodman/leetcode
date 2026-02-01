@@ -1,4 +1,6 @@
 sortedcontainers==2.4.0
 leetgo_py==0.2.4
-leetpy
+-e ../leetpy
 pyleet
+-e debug_dsa/
+
