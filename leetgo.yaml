@@ -2,7 +2,7 @@ author: Andres Vargas
 language: en
 code:
   lang: python
-  
+
 leetcode:
   site: https://leetcode.com
   credentials:
@@ -10,6 +10,4 @@ leetcode:
       - cookies
     browsers: []
 editor:
-  use: nvim
-  command: ""
-  args: ""
+  use: neovim
