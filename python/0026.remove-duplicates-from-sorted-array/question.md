@@ -61,8 +61,9 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 # NOTES
 
  1 1 2 
-   R
+     R
  L
-
+----------
+   L R  
  1 2
 

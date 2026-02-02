@@ -41,7 +41,7 @@ BEGIN {
         print "Testcase " testcase " FAILED  ❌";
         print "  Input:    " input_lines;
         print "  Expected: " expected;
-        print "  Got:      " result;
+        print "  Got:       \n" result;
     }
     next
 }
