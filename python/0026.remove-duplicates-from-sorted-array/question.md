@@ -2,8 +2,7 @@
 
 [link]: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
-Given an integer array `nums` sorted in **non-decreasing order**, remove the duplicates [**in-
-place**](https://en.wikipedia.org/wiki/In-place_algorithm) such that each unique element appears only
+Given an integer array `nums` sorted in **non-decreasing order**, remove the duplicates [**in- place**](https://en.wikipedia.org/wiki/In-place_algorithm) such that each unique element appears only
 **once**. The **relative order** of the elements should be kept the **same**.
 
 Consider the number of unique elements in `nums` to be `k` . After removing duplicates, return the
@@ -55,3 +54,15 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 - `1 <= nums.length <= 3 * 10⁴`
 - `-100 <= nums[i] <= 100`
 - `nums` is sorted in **non-decreasing** order.
+
+
+
+
+# NOTES
+
+ 1 1 2 
+   R
+ L
+
+ 1 2
+

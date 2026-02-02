@@ -36,9 +36,9 @@ BEGIN {
     sub(/[ \t\r\n]+$/, "", expected);
 
     if (result == expected) {
-        print "Testcase " testcase " PASSED";
+        print "Testcase " testcase " PASSED ✅ ";
     } else {
-        print "Testcase " testcase " FAILED";
+        print "Testcase " testcase " FAILED  ❌";
         print "  Input:    " input_lines;
         print "  Expected: " expected;
         print "  Got:      " result;
