@@ -5,22 +5,20 @@
 
 from typing import *
 from leetgo_py import *
-import debug_dsa
+import debug_dsa as d
 
 # @lc code=begin
 
 
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        l, r = 0, 0
-
-        while l < len(nums) - 1:
-            while r < len(nums) - 1 and nums[l] == nums[r]:
-                r += 1
-            nums[l + 1], nums[r] = nums[r], nums[r]
-            l += 1
-            debug_dsa.tp(nums, l, r)
-        return nums
+        l, r = 0, 1
+        while r < len(nums):
+            if nums[l] != nums[r]:
+                l += 1
+                nums[l] = nums[r]
+            r += 1
+        return l + 1
 
 
 # @lc code=end
@@ -28,4 +26,8 @@ class Solution:
 if __name__ == "__main__":
     nums: List[int] = deserialize("List[int]", read_line())
     ans = Solution().removeDuplicates(nums)
-    print("\noutput:", serialize(ans, "integer"))
+    s = serialize(ans, "List[int]")
+    assert ans == s.length
+    for (idx,) in enumerate(ans):
+        assert nums[idx] == s[idx]
+    print("\noutput:", nums[:ans])

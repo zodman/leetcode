@@ -55,15 +55,13 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 - `-100 <= nums[i] <= 100`
 - `nums` is sorted in **non-decreasing** order.
 
-
-
-
 # NOTES
-
- 1 1 2 
-     R
- L
-----------
-   L R  
- 1 2
-
+Index:    0   1   2
+Array:    1   1   2  
+Pointer:  L   R
+----------------------
+swap>>>>>>>>>>>>>>>>>>
+Index:    0   1   2
+Array:    1   2   2  
+Pointer:      L   R
+----------------------
