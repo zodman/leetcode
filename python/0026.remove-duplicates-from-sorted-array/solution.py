@@ -2,7 +2,6 @@
 # leetgo: 1.4.16
 # https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
-
 from typing import *
 from leetgo_py import *
 import debug_dsa as d
@@ -28,7 +27,5 @@ if __name__ == "__main__":
     nums: List[int] = deserialize("List[int]", read_line())
     ans = Solution().removeDuplicates(nums)
     s = serialize(ans, "List[int]")
-    assert ans == s.length
-    for (idx,) in enumerate(ans):
-        assert nums[idx] == s[idx]
-    print("\noutput:", nums[:ans])
+    assert str(ans) == s
+    print("\noutput:", ans)
