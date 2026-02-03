@@ -13,6 +13,7 @@ import debug_dsa as d
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         l, r = 0, 1
+        d.tp(nums, l, r)
         while r < len(nums):
             if nums[l] != nums[r]:
                 l += 1

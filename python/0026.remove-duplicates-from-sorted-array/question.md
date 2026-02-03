@@ -56,12 +56,66 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 - `nums` is sorted in **non-decreasing** order.
 
 # NOTES
-Index:    0   1   2
-Array:    1   1   2  
-Pointer:  L   R
+Move the stupid R instead of moving L
+
+```
+slug=$(just _slug) && pyleet python/*$slug/solution.py -t python/*$slug/testcases.txt
+Index:    0   1   2  
+Array:  [ 1   1   2  ]
+Pointer:  L   R      
 ----------------------
-swap>>>>>>>>>>>>>>>>>>
-Index:    0   1   2
-Array:    1   2   2  
-Pointer:      L   R
+Index:    0   1   2  
+Array:  [ 1   2   2  ]
+Pointer:      L   R  
 ----------------------
+MOVE RRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+--------------------------------------------------
+Index:    0   1   2   3   4   5   6   7   8   9  
+Array:  [ 0   0   1   1   1   2   2   3   3   4  ]
+Pointer:  L   R                                  
+--------------------------------------------------
+Index:    0   1   2   3   4   5   6   7   8   9  
+Array:  [ 0   1   1   1   1   2   2   3   3   4  ]
+Pointer:      L   R                              
+--------------------------------------------------
+Index:    0   1   2   3   4   5   6   7   8   9  
+Array:  [ 0   1   1   1   1   2   2   3   3   4  ]
+Pointer:      L       R                          
+--------------------------------------------------
+Index:    0   1   2   3   4   5   6   7   8   9  
+Array:  [ 0   1   1   1   1   2   2   3   3   4  ]
+Pointer:      L           R                      
+--------------------------------------------------
+Index:    0   1   2   3   4   5   6   7   8   9  
+Array:  [ 0   1   2   1   1   2   2   3   3   4  ]
+Pointer:          L           R                  
+--------------------------------------------------
+Index:    0   1   2   3   4   5   6   7   8   9  
+Array:  [ 0   1   2   1   1   2   2   3   3   4  ]
+Pointer:          L               R              
+--------------------------------------------------
+Index:    0   1   2   3   4   5   6   7   8   9  
+Array:  [ 0   1   2   3   1   2   2   3   3   4  ]
+Pointer:              L               R          
+--------------------------------------------------
+Index:    0   1   2   3   4   5   6   7   8   9  
+Array:  [ 0   1   2   3   1   2   2   3   3   4  ]
+Pointer:              L                   R      
+--------------------------------------------------
+Index:    0   1   2   3   4   5   6   7   8   9  
+Array:  [ 0   1   2   3   4   2   2   3   3   4  ]
+Pointer:                  L                   R  
+--------------------------------------------------
+Test Case 1: PASS
+  Input:    ([1, 1, 2],)
+  Expected:  2
+  Actual:    2
+
+Test Case 2: PASS
+  Input:    ([0, 0, 1, 1, 1, 2, 2, 3, 3, 4],)
+  Expected:  5
+  Actual:    5
+
+Passed 2/2 test cases.
+```
+```
